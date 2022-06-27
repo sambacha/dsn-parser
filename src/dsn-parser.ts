@@ -8,6 +8,8 @@ import {
 } from './dsn-parser.util';
 import { parseQueryParams } from './query-param-parser';
 
+// prettier-ignore
+/*eslint require-unicode-regexp: error */
 const dsnRegexp = new RegExp(
   `^(?<driver>([a-z0-9_-]+)):\\/\\/((?<user>.+)?:(?<pass>.+)@)?(?<host>[^\\/:]+?)(:(?<port>\\d+)?)?(\\/(?<db>([\\.#@$a-z0-9_-])+))?(\\?(?<params>.+))?$`,
   'i'
