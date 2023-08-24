@@ -9,8 +9,8 @@
     "noEmit": false,
     "declaration": true,
     "declarationMap": false,
-    "declarationDir": "./dist"
+    "declarationDir": "./build"
   },
-  "include": ["./src/*.types.ts"],
-  "exclude": ["*.test.ts"]
+  "include": ["./src/*"],
+  "exclude": ["__tests__/*"]
 }
