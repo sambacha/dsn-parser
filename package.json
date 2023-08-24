@@ -1,7 +1,7 @@
 {
   "name": "dsn3",
   "description": "Generic Typesafe DSN (Data source name) Parser for Web3",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "Apache-2.0 OR MIT",
   "private": false,
   "jsnext:main": "dist/dsn-parser.es.js",
@@ -18,7 +18,11 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "package.json"
+    "README.md",
+    "LICENSE.md"
   ],
   "sideEffects": false,
   "scripts": {
@@ -29,7 +33,7 @@
     "tracer": "mkdir -p tmp_folder/ && npx tsc -p ./tsconfig.json --generateTrace tmp_folder",
     "start": "cross-env NODE_ENV=development microbundle watch",
     "build": "rimraf ./dist && cross-env NODE_ENV=production microbundle --tsconfig tsconfig.build.json --format esm,cjs --no-compress --target node",
-    "build-release": "yarn build",
+    "build-release": "npm build",
     "check-dist": "es-check -v",
     "clean": "rimraf --no-glob ./dist ./build ./coverage ./out",
     "test-unit": "jest --config jest.config.js --color $@",
@@ -41,7 +45,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27",
-    "@types/node": "^16",
+    "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "@typescript/analyze-trace": "^0.9.0",
@@ -51,7 +55,7 @@
     "eslint": "^8.16.0",
     "jest": "28.1.0",
     "microbundle": "0.14.2",
-     "prettier": "^2.7.0",
+    "prettier": "^2.7.0",
     "rimraf": "3.0.2",
     "ts-jest": "28.0.3",
     "tslib": "^2.4.0",
@@ -67,8 +71,5 @@
     "not IE > 0",
     "not samsung 4",
     "not and_uc 12.12",
-  ],
-  "engines": {
-    "node": "^14.13.1 || >=16 || >=18"
-  }
+  ]
 }
